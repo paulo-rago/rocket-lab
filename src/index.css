@@ -1,7 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 @import "tailwindcss";
 
+
 body {
   font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
-  background-color: #d6d5c9;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #022c22 0%, #065f46 25%, #064e3b 75%, #022c22 100%);
+  background-size: 300% 300%;
+  animation: gradientBG 16s ease-in-out infinite;
+  transition: background 0.5s;
+  overflow-x: hidden;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-size: 400% 400%;
+    animation-duration: 24s;
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

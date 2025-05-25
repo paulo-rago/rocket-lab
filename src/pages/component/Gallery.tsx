@@ -26,8 +26,12 @@ const Gallery: React.FC = () => {
   };
 
   return (
-    <div id="gallery" className="relative w-full max-w-5xl mx-auto my-16" data-carousel="slide">
-      <div className="relative h-80 md:h-[36rem] overflow-hidden rounded-[3rem] shadow-2xl border-8 border-white bg-gradient-to-br from-[#e0e7ef] to-[#f8fafc]">
+    <div
+      id="gallery"
+      className="relative w-screen max-w-none left-1/2 right-1/2 -translate-x-1/2 my-16"
+      data-carousel="slide"
+    >
+      <div className="relative h-80 md:h-[36rem] overflow-hidden rounded-[3rem] shadow-2xl border-8 border-white bg-gradient-to-br from-[#e0e7ef] to-[#f8fafc] w-screen">
         <div
           className="flex transition-transform duration-700 ease-in-out h-full"
           style={{

@@ -7,5 +7,4 @@ export interface Order {
   items: ProductCart[];
   customer: CheckoutForm;
   total: number;
-  status: 'Pendente' | 'Pago' | 'Cancelado';
 }

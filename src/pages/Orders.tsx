@@ -12,39 +12,42 @@ export const Orders = () => {
 
   return (
     <Layout>
-      <div className="p-6">
-        <h1 className="text-2xl font-bold mb-6">Meus Pedidos</h1>
-        {orders.length === 0 ? (
-          <p className="text-gray-500">Nenhum pedido encontrado.</p>
-        ) : (
-          <div className="grid gap-4">
-            {orders.map((order) => (
-              <div key={order.id} className="border rounded-lg p-4 shadow">
-                <div className="flex justify-between">
-                  <div>
-                    <p className="text-lg font-semibold">Pedido: {order.id}</p>
-                    <p className="text-sm text-gray-500">Data: {order.date}</p>
-                    <p className="text-sm text-gray-500">Status: {order.status}</p>
+      <section className="min-h-[70vh] bg-gradient-to-br from-[#f8fafc] to-[#e0e7ef] py-12">
+        <div className="mx-auto max-w-3xl px-4">
+          <h1 className="text-4xl font-extrabold text-green-900 mb-8 text-center tracking-tight drop-shadow-lg">Meus Pedidos</h1>
+          {orders.length === 0 ? (
+            <div className="flex flex-col items-center justify-center py-16">
+              <p className="text-gray-500 text-lg">Nenhum pedido encontrado.</p>
+            </div>
+          ) : (
+            <div className="grid gap-8">
+              {orders.map((order) => (
+                <div key={order.id} className="border border-green-100 rounded-2xl p-6 shadow-lg bg-white/80 hover:shadow-2xl transition-all duration-300">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+                    <div>
+                      <p className="text-lg font-bold text-green-900">Pedido: <span className="font-mono">{order.id}</span></p>
+                      <p className="text-sm text-gray-500">Data: {order.date}</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-2xl font-extrabold text-emerald-700 drop-shadow">R$ {order.total.toFixed(2)}</p>
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <p className="text-lg font-bold text-emerald-600">R$ {order.total.toFixed(2)}</p>
+                  <div className="mt-4">
+                    <p className="font-semibold text-gray-800 mb-1">Itens:</p>
+                    <ul className="list-disc ml-6 text-sm text-gray-700 space-y-1">
+                      {order.items.map((item) => (
+                        <li key={item.id}>
+                          <span className="font-medium">{item.name}</span> <span className="text-gray-500">- {item.quantity}x</span> <span className="text-green-900 font-semibold">R$ {item.price.toFixed(2)}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-                <div className="mt-3">
-                  <p className="font-semibold">Itens:</p>
-                  <ul className="list-disc ml-5 text-sm">
-                    {order.items.map((item) => (
-                      <li key={item.id}>
-                        {item.name} - {item.quantity}x - R$ {item.price.toFixed(2)}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
     </Layout>
   );
 };
