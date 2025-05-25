@@ -14,3 +14,8 @@ export interface ProductCart {
   color: string;
   quantity: number;
 }
+
+export interface HomeProps {
+  cart: ProductCart[];
+  setCart: React.Dispatch<React.SetStateAction<ProductCart[]>>;
+}

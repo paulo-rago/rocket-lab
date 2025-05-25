@@ -1,6 +1,3 @@
-
-
-
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Alert } from './component/Alert';
@@ -8,17 +5,10 @@ import { ProductList } from './component/ProductList';
 import { ShoppingCart } from './component/ShoppingCart';
 import { products } from '../types/productsData';
 import type { Product } from '../types/Products';
-import type { ProductCart } from '../types/Cart';
 import Layout from './component/Layout';
 import Gallery from './component/Gallery';
-
-
-interface HomeProps {
-  cart: ProductCart[];
-  setCart: React.Dispatch<React.SetStateAction<ProductCart[]>>;
-}
-
-
+import type { HomeProps } from '../types/Cart.ts';
+import { Button } from './component/Button';
 
 function Home({ cart, setCart }: HomeProps) {
   const [open, setOpen] = useState(false);
@@ -74,12 +64,12 @@ function Home({ cart, setCart }: HomeProps) {
         </div>
       )}
       <header className="flex justify-between p-4">
-        <button
-          onClick={() => setOpen(true)}
-          className="rounded bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
-        >
-          Carrinho ({cart.reduce((sum, item) => sum + item.quantity, 0)})
-        </button>
+        <Button
+    onClick={() => setOpen(true)}
+    variant="primary"
+  >
+    Carrinho ({cart.reduce((sum, item) => sum + item.quantity, 0)})
+      </Button>
       </header>
       <Gallery />
       <ProductList products={products} onAdd={addToCart} />

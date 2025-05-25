@@ -1,4 +1,4 @@
-import './index.css'; // ✅ obrigatório para aplicar o tailwind
+import './index.css'; 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';

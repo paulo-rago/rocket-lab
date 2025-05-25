@@ -13,7 +13,7 @@ export function ProductList({ products, onAdd }: Props) {
 
   return (
     <>
-      <div className="bg-white">
+      <div>
         <div className="mx-auto max-w-7xl px-4 py-16">
           <h2 className="text-2xl font-bold text-gray-900">Nossos Produtos</h2>
 

@@ -20,3 +20,4 @@ export interface ProductInfoProps {
   product: Product;
   onAdd: (product: Product) => void;
 }
+
