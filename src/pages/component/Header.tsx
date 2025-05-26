@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Button } from './Button';
 
 const Header: React.FC = () => {
   const navigate = useNavigate();
@@ -10,7 +11,6 @@ const Header: React.FC = () => {
       <nav className="bg-black border-b-2 border-green-900 px-4 sm:px-6 lg:px-10 py-3 shadow-lg">
         <div className="flex flex-wrap items-center justify-between mx-auto max-w-screen-xl">
           
-          {/* Logo */}
           <div
             className="flex items-center gap-3 cursor-pointer"
             onClick={() => navigate("/")}
@@ -20,10 +20,20 @@ const Header: React.FC = () => {
             </span>
           </div>
 
-          {/* Right buttons + hamburger */}
           <div className="flex items-center gap-2 lg:order-2">
+            <Button
+              variant="secondary"
+              className="shadow hover:shadow-lg transition-all duration-200 text-xs sm:text-sm md:text-base"
+            >
+              Log in
+            </Button>
+            <Button
+              variant="primary"
+              className="shadow hover:shadow-lg transition-all duration-200 text-xs sm:text-sm md:text-base"
+            >
+              Get started
+            </Button>
 
-            {/* Hamburger */}
             <button
               type="button"
               className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-green-900"
@@ -32,7 +42,6 @@ const Header: React.FC = () => {
               onClick={() => setMenuOpen(!menuOpen)}
             >
               <span className="sr-only">Open main menu</span>
-              {/* Menu Icon */}
               <svg
                 className={`w-6 h-6 ${menuOpen ? 'hidden' : 'block'}`}
                 fill="currentColor"
@@ -44,7 +53,6 @@ const Header: React.FC = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              {/* Close Icon */}
               <svg
                 className={`w-6 h-6 ${menuOpen ? 'block' : 'hidden'}`}
                 fill="currentColor"
@@ -59,7 +67,6 @@ const Header: React.FC = () => {
             </button>
           </div>
 
-          {/* Menu Items */}
           <div
             className={`w-full lg:flex lg:w-auto lg:order-1 transition-all duration-300 ${
               menuOpen ? 'block' : 'hidden'
