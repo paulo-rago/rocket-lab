@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button } from './Button';
 
 const Header: React.FC = () => {
   const navigate = useNavigate();
@@ -23,18 +22,6 @@ const Header: React.FC = () => {
 
           {/* Right buttons + hamburger */}
           <div className="flex items-center gap-2 lg:order-2">
-            <Button
-              variant="secondary"
-              className="shadow hover:shadow-lg transition-all duration-200 text-xs sm:text-sm md:text-base"
-            >
-              Log in
-            </Button>
-            <Button
-              variant="primary"
-              className="shadow hover:shadow-lg transition-all duration-200 text-xs sm:text-sm md:text-base"
-            >
-              Get started
-            </Button>
 
             {/* Hamburger */}
             <button
