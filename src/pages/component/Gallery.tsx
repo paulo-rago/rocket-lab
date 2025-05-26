@@ -31,7 +31,7 @@ const Gallery: React.FC = () => {
       className="relative w-screen max-w-none left-1/2 right-1/2 -translate-x-1/2 my-16"
       data-carousel="slide"
     >
-      <div className="relative h-80 md:h-[36rem] overflow-hidden rounded-[3rem] shadow-2xl border-8 border-white bg-gradient-to-br from-[#e0e7ef] to-[#f8fafc] w-screen">
+      <div className="relative h-80 md:h-[36rem] overflow-hidden shadow-2xl border-8 border-white bg-gradient-to-br from-[#e0e7ef] to-[#f8fafc] w-screen">
         <div
           className="flex transition-transform duration-700 ease-in-out h-full"
           style={{
@@ -49,7 +49,7 @@ const Gallery: React.FC = () => {
               <div className="relative w-full h-full flex items-center justify-center group">
                 <img
                   src={src}
-                  className="w-full h-full object-cover rounded-3xl shadow-2xl border-4 border-white transition-transform duration-500 group-hover:scale-110 group-hover:shadow-3xl"
+                  className="w-full h-full object-cover shadow-2xl transition-transform duration-500 group-hover:scale-110 group-hover:shadow-3xl"
                   alt={`Gallery image ${idx + 1}`}
                   style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.22)' }}
                 />
