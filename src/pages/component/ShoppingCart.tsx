@@ -118,7 +118,7 @@ export function ShoppingCart({ open, setOpen, cart, onRemove }: Props) {
                       <Button
                         onClick={() => setOpen(false)}
                         variant="secondary"
-                        className="font-medium text-indigo-600 hover:text-indigo-500 ml-1"
+                        className="font-medium ml-1"
                       >
                         Continuar comprando <span aria-hidden="true"> &rarr;</span>
                       </Button>

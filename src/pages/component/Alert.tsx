@@ -9,7 +9,6 @@ export const Alert = ({
   closable = false,
   onClose,
 }: AlertProps) => {
-  // Timer state for countdown
   const [secondsLeft, setSecondsLeft] = useState(5);
 
   useEffect(() => {
@@ -45,9 +44,11 @@ export const Alert = ({
     >
       <span className="flex-1 text-base leading-relaxed">
         {message}
-        <span className="ml-3 text-xs font-semibold text-gray-500 align-middle select-none">
-          ({secondsLeft})
-        </span>
+        {(type === 'success' || type === 'error') && (
+          <span className="ml-3 text-xs font-semibold text-gray-500 align-middle select-none">
+            ({secondsLeft})
+          </span>
+        )}
       </span>
       {closable && (
         <button

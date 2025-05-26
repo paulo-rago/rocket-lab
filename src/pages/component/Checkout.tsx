@@ -25,7 +25,6 @@ export const Checkout = ({ cart = [] }: CheckoutProps) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Basic validation for empty fields
     if (!form.cardNumber || !form.cardName || !form.expiry || !form.cvc || !form.installments) {
       setFormWarning('Por favor, preencha todos os campos obrigatórios.');
       setShowAlert(false);
@@ -60,7 +59,6 @@ export const Checkout = ({ cart = [] }: CheckoutProps) => {
       <div className="bg-white shadow-2xl rounded-3xl p-8 max-w-4xl w-full flex flex-col md:flex-row gap-10 border border-gray-200">
         {/* Payment Form Card */}
         <div className="flex-1 flex flex-col justify-center">
-          {/* Alert and Warning Messages */}
           {formWarning && (
             <div className="mb-4 p-3 rounded-lg bg-yellow-100 text-yellow-800 border border-yellow-300">
               {formWarning}
@@ -158,7 +156,6 @@ export const Checkout = ({ cart = [] }: CheckoutProps) => {
           </form>
         </div>
 
-        {/* Order Summary Card */}
         <div className="w-full md:max-w-xs flex flex-col justify-center">
           <div className="border border-gray-200 rounded-2xl p-6 bg-gray-50 shadow-md">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Resumo do Pedido</h3>
