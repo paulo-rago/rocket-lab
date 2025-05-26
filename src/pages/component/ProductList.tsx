@@ -13,7 +13,7 @@ export function ProductList({ products, onAdd }: Props) {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-[#f8fafc] to-[#d6d5c9] py-20 min-h-[80vh]">
+      <section className="linear-gradient(45deg, #ffffff, #f5f5f5, #e0e0e0, #cccccc, #b3b3b3); py-20 min-h-[80vh]">
         <div className="mx-auto max-w-7xl px-4">
           <h2 className="text-4xl font-extrabold text-gray-900 mb-2 text-center tracking-tight drop-shadow-lg">Nossos Produtos</h2>
           <p className="text-lg text-gray-500 mb-10 text-center">Escolha o melhor para você!</p>

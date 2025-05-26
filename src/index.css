@@ -5,7 +5,7 @@
 body {
   font-family: 'Titillium Web', Arial, Helvetica, sans-serif;
   min-height: 100vh;
-  background: linear-gradient(-45deg, #022c22 0%, #065f46 25%, #064e3b 75%, #022c22 100%);
+  background: linear-gradient(45deg, #ffffff, #f5f5f5, #e0e0e0, #cccccc, #b3b3b3);
   background-size: 300% 300%;
   animation: gradientBG 16s ease-in-out infinite;
   transition: background 0.5s;
