@@ -1,8 +1,8 @@
-# Rocket Lab
+# Rocket Store
 
 ## 🚀 Introdução
 
-**Rocket Lab** é uma aplicação web desenvolvida em React e TypeScript que simula um pequeno e-commerce de produtos. Nela, usuários podem navegar pelos produtos, adicionar itens ao carrinho e realizar um *checkout* simulando uma compra. Após a compra, é possível visualizar uma lista de pedidos realizados.
+**Rocket Store** é uma aplicação web desenvolvida em React e TypeScript que simula um pequeno e-commerce de produtos. Nela, usuários podem navegar pelos produtos, adicionar itens ao carrinho e realizar um *checkout* simulando uma compra. Após a compra, é possível visualizar uma lista de pedidos realizados.
 
 Este projeto foi criado de forma didática, utilizando tecnologias modernas como React, Vite e Tailwind CSS.
 
@@ -130,6 +130,6 @@ rocket-lab/
 
 ## 🚀 Sobre o Projeto
 
-O Rocket Lab foi desenvolvido com o objetivo de explorar conceitos de desenvolvimento frontend moderno, utilizando React, Vite, Tailwind CSS e boas práticas de desenvolvimento.
+O Rocket Store foi desenvolvido com o objetivo de explorar conceitos de desenvolvimento frontend moderno, utilizando React, Vite, Tailwind CSS e boas práticas de desenvolvimento.
 
 Sinta-se à vontade para explorar, estudar, utilizar e melhorar este projeto!
